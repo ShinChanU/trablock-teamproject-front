@@ -1,5 +1,8 @@
 {
-  "compileOnSave": {
-    "target": "es6"
-  }
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "includes": [
+    "src"
+  ]
 }
