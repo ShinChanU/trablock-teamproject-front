@@ -28,7 +28,7 @@ const BorderedButton = styled(Link)`
 `;
 
 const LoginButton = () => (
-  <BorderedButton to="auth">
+  <BorderedButton to="login">
     로그인 / 회원가입
   </BorderedButton>
 );
