@@ -27,10 +27,24 @@ const BorderedButton = styled(Link)`
     }
 `;
 
-const LoginButton = () => (
-  <BorderedButton to="login">
-    로그인 / 회원가입
-  </BorderedButton>
-);
+const LoginButton = ({ user }) => {
+  return (
+    <>
+      {user ? (
+        <div>
+          {user.username}
+          <BorderedButton>
+            로그아웃
+          </BorderedButton>
+        </div>) : (
+        <div>
+          <BorderedButton to="login">
+            로그인 / 회원가입
+          </BorderedButton>
+        </div>
+      )}
+    </>
+  );
+};
 
 export default LoginButton;

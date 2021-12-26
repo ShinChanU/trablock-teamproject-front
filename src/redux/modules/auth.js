@@ -31,10 +31,17 @@ export const initializeForm = createAction(
   form => form
 ); // signup, login
 
-export const signup = createAction(SIGNUP, ({ username, password }) => ({
-  username,
-  password,
-}));
+export const signup = createAction(SIGNUP, (
+  { username, password, name, nickname, birthday, tel, gender, email }) => ({
+    username,
+    password,
+    name,
+    nickname,
+    birthday,
+    tel,
+    gender,
+    email
+  }));
 
 export const login = createAction(LOGIN, ({ username, password }) => ({
   username,
@@ -88,7 +95,7 @@ const auth = handleActions({
     authError: null,
     auth
   }),
-  // 회원가입 실해
+  // 회원가입 실패
   [SIGNUP_FAILURE]: (state, { payload: error }) => ({
     ...state,
     authError: error,
