@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer, { rootSaga } from 'redux/modules';
-import createSagaMiddleware from '@redux-saga/core';
+import createSagaMiddleware from 'redux-saga';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
