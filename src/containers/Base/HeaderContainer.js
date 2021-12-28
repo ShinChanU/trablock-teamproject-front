@@ -1,16 +1,14 @@
 import React from 'react';
-import Header, { LoginButton } from 'components/Base/Header';
+import Header from 'components/Base/Header';
 import { useSelector } from 'react-redux';
 
 const HeaderContainer = () => {
-  const { user } = useSelector(({ user }) => ({
-    user: user.user
+  const { userState } = useSelector(({ user }) => ({
+    userState: user.userState
   }));
 
   return (
-    <Header>
-      <LoginButton user={user} />
-    </Header>
+    <Header user={userState} />
   );
 };
 
