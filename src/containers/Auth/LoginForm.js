@@ -54,8 +54,13 @@ const LoginForm = () => {
   useEffect(() => {
     if (userState) {
       navigate('/');
+      try {
+        localStorage.setItem('userState', JSON.stringify(userState));
+      } catch (e) {
+        console.log('localStorage is not working');
+      }
     }
-  }, [userState]);
+  }, [userState, navigate]);
 
   return (
     <AuthForm

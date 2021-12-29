@@ -67,7 +67,7 @@ const UserInfo = styled.div`
   color: ${oc.teal[7]};
 `;
 
-const Header = ({ user }) => {
+const Header = ({ user, onLogout }) => {
   return (
     <Positioner>
       <WhiteBackground>
@@ -77,7 +77,7 @@ const Header = ({ user }) => {
           {user ? (
             <>
               <UserInfo>{user.username}</UserInfo>
-              <LoginButton>로그아웃</LoginButton>
+              <LoginButton onClick={onLogout}>로그아웃</LoginButton>
             </>
           ) : (
             <LoginButton to='/login'>로그인</LoginButton>
