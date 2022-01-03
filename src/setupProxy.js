@@ -6,5 +6,5 @@ module.exports = function (app) {
       target: 'http://localhost:4040/',
       changeOrigin: true
     })
-  )
+  );
 };
