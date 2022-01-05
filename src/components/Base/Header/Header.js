@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { shadow, media } from 'lib/styleUtils';
 import oc from 'open-color';
 import LoginButton from 'components/Base/Header/LoginButton';
+import Button from 'components/common/Button';
 
 // 상단 고정, 그림자
 const Positioner = styled.div`
@@ -80,7 +81,7 @@ const Header = ({ user, onLogout }) => {
               <LoginButton onClick={onLogout}>로그아웃</LoginButton>
             </>
           ) : (
-            <LoginButton to='/login'>로그인</LoginButton>
+            <Button to='/login'>로그인</Button>
           )}
         </HeaderContents>
       </WhiteBackground>
