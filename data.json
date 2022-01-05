@@ -1,0 +1,23 @@
+{
+  "travelPlans": [
+    {
+      "id": "1",
+      "name": "새 여행 캔버스(1)",
+      "periods": "3",
+      "concept": "Love",
+      "startDay": "20211215",
+      "arriveDay": "20211218",
+      "selectedLocations": [
+        {
+          "id": "123"
+        },
+        {
+          "id": "124"
+        },
+        {
+          "id": "125"
+        }
+      ]
+    }
+  ]
+}
