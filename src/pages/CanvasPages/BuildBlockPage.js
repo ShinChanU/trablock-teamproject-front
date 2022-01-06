@@ -1,10 +1,9 @@
 import React from 'react';
+import BuildBlockForm from 'containers/Canvas/BuildBlockForm';
 
 const BuildBlockPage = () => {
   return (
-    <div>
-      여행 캔버스 페이지입니다.
-    </div>
+    <BuildBlockForm />
   );
 };
 

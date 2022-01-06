@@ -1,7 +1,7 @@
 {
   "travelPlans": [
     {
-      "id": "1",
+      "id": 1,
       "name": "새 여행 캔버스(1)",
       "periods": "3",
       "concept": "Love",
@@ -16,6 +16,25 @@
         },
         {
           "id": "125"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "새 여행 캔버스(2)",
+      "periods": "4",
+      "concept": "Love",
+      "startDay": "20211215",
+      "arriveDay": "20211218",
+      "selectedLocations": [
+        {
+          "id": "12312"
+        },
+        {
+          "id": "12423"
+        },
+        {
+          "id": "12543"
         }
       ]
     }
