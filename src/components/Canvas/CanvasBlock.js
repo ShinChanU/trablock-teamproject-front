@@ -1,7 +1,7 @@
 import React from 'react';
 // import user from 'redux/modules/user';
 
-const Block = ({ loadingPlan, plan }) => {
+const CanvasBlock = ({ loadingPlan, plan }) => {
   console.log(plan);
 
   return (
@@ -24,4 +24,4 @@ const Block = ({ loadingPlan, plan }) => {
   );
 };
 
-export default Block;
+export default CanvasBlock;

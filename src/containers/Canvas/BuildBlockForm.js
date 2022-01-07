@@ -1,7 +1,8 @@
 import { getPlan } from 'redux/modules/plan';
 import React, { useEffect } from 'react';
-import Block from 'components/Canvas/Block';
+import CanvasBlock from 'components/Canvas/CanvasBlock';
 import { useDispatch, useSelector } from 'react-redux';
+import CanvasForm from 'components/Canvas/CanvasForm';
 
 const BuildBlockForm = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,8 @@ const BuildBlockForm = () => {
 
   return (
     <div>
-      <Block
-        plan={plan}
-        loadingPlan={loadingPlan}
+      <CanvasForm
+        type="build"
       />
     </div>
   );
