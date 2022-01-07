@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import oc from 'open-color';
 
 const Menu = styled.div`
-  width: 14vw;
   height: calc(100vh - 58px); // header 크기가 58px(55 + 3)
   background-color: ${oc.teal[6]};
   font-family: 'Rajdhani';
@@ -19,10 +18,10 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  font-size: 1.4vw;
-    font-weight: 550;
-    padding-bottom: 20px;
-    margin-left: 20%;
+  font-size: 20px; // 반응형 고민
+  font-weight: 550;
+  padding-bottom: 20px;
+  margin-left: 20%;
   list-style: none;
   a {
     color: ${(props) => (props.selected ? `black` : "white")};  

@@ -5,8 +5,8 @@ const TravelSharePage = () => {
   return (
     <>
       <CanvasTemplate>
+        여행 공유 페이지입니다.
       </CanvasTemplate>
-      여행 공유 페이지입니다.
     </>
   );
 };

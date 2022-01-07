@@ -2,7 +2,6 @@ import React from 'react';
 // import user from 'redux/modules/user';
 
 const CanvasBlock = ({ loadingPlan, plan }) => {
-  console.log(plan);
 
   return (
     <div>

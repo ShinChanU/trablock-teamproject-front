@@ -1,5 +1,17 @@
 import React from 'react';
-import CanvasBlock from 'components/Canvas/CanvasBlock';
+import CanvasBuildForm from 'components/Canvas/CanvasBuildForm';
+import styled from 'styled-components';
+
+const CanvasDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  /* border: 2px solid black; */
+  width: 100vw;
+  padding-left: 17.5%;
+`;
 
 const textMap = {
   setting: '여행 설정',
@@ -12,15 +24,15 @@ const CanvasForm = ({ type, plan, loadingPlan }) => {
   const text = textMap[type];
 
   return (
-    <div>
-      CanvasMenu
+    <CanvasDiv>
       {text}
-      {type === '여행 캔버스'}
-      <CanvasBlock
-        plan={plan}
-        loadingPlan={loadingPlan}
-      />
-    </div>
+      {type === 'build' && (
+        <CanvasBuildForm
+          plan={plan}
+          loadingPlan={loadingPlan}
+        />
+      )}
+    </CanvasDiv>
   );
 };
 

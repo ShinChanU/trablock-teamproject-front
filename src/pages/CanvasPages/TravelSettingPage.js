@@ -5,8 +5,8 @@ const TravelSettingPage = () => {
   return (
     <>
       <CanvasTemplate>
+        여행 설정 페이지입니다.
       </CanvasTemplate>
-      여행 설정 페이지입니다.
     </>
   );
 };
