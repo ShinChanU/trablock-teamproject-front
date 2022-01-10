@@ -1,12 +1,12 @@
 import React from 'react';
 import CanvasTemplate from 'components/Canvas/CanvasTemplate';
-import BuildBlockForm from 'containers/Canvas/BuildBlockForm';
+import CanvasForm from 'components/Canvas/CanvasForm';
 
 const BuildBlockPage = () => {
   return (
     <>
       <CanvasTemplate>
-        <BuildBlockForm />
+        <CanvasForm type="build" />
       </CanvasTemplate>
     </>
   );

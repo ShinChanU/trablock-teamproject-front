@@ -6,8 +6,6 @@ import SelectBlockPage from './SelectBlockPage';
 import BuildBlockPage from './BuildBlockPage';
 import TravelSharePage from './TravelSharePage';
 
-// 여기에서 그리드 만들기
-
 const CanvasMainPage = () => {
   return (
     <Routes>

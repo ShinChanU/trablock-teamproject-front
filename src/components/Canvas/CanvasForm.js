@@ -1,6 +1,6 @@
 import React from 'react';
-import CanvasBuildForm from 'components/Canvas/CanvasBuildForm';
 import styled from 'styled-components';
+import BuildBlockForm from 'containers/Canvas/BuildBlockForm';
 
 const CanvasDiv = styled.div`
   position: absolute;
@@ -8,9 +8,9 @@ const CanvasDiv = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   height: 70vh;
-  /* border: 2px solid black; */
   width: 100vw;
   padding-left: 17.5%;
+  z-index: -1;
 `;
 
 const textMap = {
@@ -20,17 +20,14 @@ const textMap = {
   share: '여행 공유'
 };
 
-const CanvasForm = ({ type, plan, loadingPlan }) => {
+const CanvasForm = ({ type }) => {
   const text = textMap[type];
 
   return (
     <CanvasDiv>
       {text}
       {type === 'build' && (
-        <CanvasBuildForm
-          plan={plan}
-          loadingPlan={loadingPlan}
-        />
+        <BuildBlockForm />
       )}
     </CanvasDiv>
   );

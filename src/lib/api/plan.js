@@ -12,7 +12,7 @@ import axios from 'axios';
 
 export const getPlan = async id => {
   try {
-    return await axios.get('http://localhost:4000/travelPlans');
+    return await axios.get(`http://localhost:4000/travelPlans/${id}`);
   } catch (error) {
     console.error(error);
   }

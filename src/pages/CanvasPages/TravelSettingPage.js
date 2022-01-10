@@ -1,11 +1,12 @@
 import React from 'react';
 import CanvasTemplate from 'components/Canvas/CanvasTemplate';
+import CanvasForm from 'components/Canvas/CanvasForm';
 
 const TravelSettingPage = () => {
   return (
     <>
       <CanvasTemplate>
-        여행 설정 페이지입니다.
+        <CanvasForm type="setting" />
       </CanvasTemplate>
     </>
   );
