@@ -23,7 +23,7 @@ export const changeField = createAction(
   CHANGE_FIELD,
   ({ form, key, value }) => ({
     form, // login, signup
-    key, // username, password, name ..
+    key, // userId, password, name ..
     value
   })
 );
@@ -34,19 +34,20 @@ export const initializeForm = createAction(
 ); // signup, login
 
 export const signup = createAction(SIGNUP, (
-  { username, password, name, nickname, birthday, tel, gender, email }) => ({
-    username,
+  { userId, password, passwordCheck, username, nickname, birthday, phoneNum, gender, email }) => ({
+    userId,
     password,
-    name,
+    passwordCheck,
+    username,
     nickname,
     birthday,
-    tel,
+    phoneNum,
     gender,
     email
   }));
 
-export const login = createAction(LOGIN, ({ username, password }) => ({
-  username,
+export const login = createAction(LOGIN, ({ userId, password }) => ({
+  userId,
   password
 }));
 // export const login = ({ type: LOGIN });
@@ -63,18 +64,18 @@ export function* authSaga() {
 // 초기값
 const initialState = { // 불변성 유지하면서 객체 수정
   signup: {
-    username: '',
+    userId: '',
     password: '',
-    passwordConfirm: '',
-    name: '',
+    passwordCheck: '',
+    username: '',
     nickname: '',
     birthday: '',
-    tel: '',
+    phoneNum: '',
     gender: '',
     email: '',
   },
   login: {
-    username: '',
+    userId: '',
     password: ''
   },
   auth: null,
@@ -94,7 +95,7 @@ const initialState = { // 불변성 유지하면서 객체 수정
 const auth = handleActions({
   [CHANGE_FIELD]: (state, { payload: { form, key, value } }) =>  // action 대신 구조분해, action.payload.form, key.. 호출
     produce(state, draft => {
-      draft[form][key] = value; // ex. state.signup.username
+      draft[form][key] = value; // ex. state.signup.userId
     }),
   [INITIALIZE_FORM]: (state, { payload: form }) => ({
     ...state,

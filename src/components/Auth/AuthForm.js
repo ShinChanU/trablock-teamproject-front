@@ -101,10 +101,10 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
             </StyledLabel>
             <StyledInput
               autoComplete="username"
-              name="username"
+              name="userId"
               placeholder="아이디"
               onChange={onChange}
-              value={form.username}
+              value={form.userId}
             />
           </StyledDiv>
           <StyledDiv>
@@ -128,21 +128,21 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
                 <StyledLabel>비밀번호 확인<SpanRed>*</SpanRed></StyledLabel>
                 <StyledInput
                   autoComplete="new-password"
-                  name="passwordConfirm"
+                  name="passwordCheck"
                   placeholder="비밀번호 확인"
                   type="password"
                   onChange={onChange}
-                  value={form.passwordConfirm}
+                  value={form.passwordCheck}
                 />
               </StyledDiv>
               <StyledDiv>
                 <StyledLabel>이름<SpanRed>*</SpanRed></StyledLabel>
                 <StyledInput
-                  name="name"
+                  name="username"
                   placeholder="이름"
                   type="text"
                   onChange={onChange}
-                  value={form.name}
+                  value={form.username}
                 />
               </StyledDiv>
               <StyledDiv>
@@ -167,11 +167,11 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
               <StyledDiv>
                 <StyledLabel>휴대전화</StyledLabel>
                 <StyledInput
-                  name="tel"
+                  name="phoneNum"
                   placeholder="( - ) 없이 적어주세요."
                   type="tel"
                   onChange={onChange}
-                  value={form.tel}
+                  value={form.phoneNum}
                 />
               </StyledDiv>
               <StyledDiv>
@@ -189,7 +189,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
                     }}
                     name="gender"
                     type="radio"
-                    value="male"
+                    value="MALE"
                     onChange={onChange}
                   />남자
                   <StyledInput
@@ -200,7 +200,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
                     }}
                     name="gender"
                     type="radio"
-                    value="female"
+                    value="FEMALE"
                     onChange={onChange}
                   />여자
                 </div>

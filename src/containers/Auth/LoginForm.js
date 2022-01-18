@@ -30,8 +30,8 @@ const LoginForm = () => {
   // 폼 등록 이벤트 핸들러
   const onSubmit = e => {
     e.preventDefault();
-    const { username, password } = form;
-    dispatch(login({ username, password }));
+    const { userId, password } = form;
+    dispatch(login({ userId, password }));
   };
 
   // 컴포넌트가 처음 렌더링될 때 form 초기화
@@ -39,28 +39,28 @@ const LoginForm = () => {
     dispatch(initializeForm('login'));
   }, [dispatch]);
 
-  useEffect(() => {
-    if (authError) {
-      console.log('오류 발생');
-      console.log(authError);
-      return;
-    }
-    if (auth) {
-      console.log('로그인 성공');
-      dispatch(check());
-    }
-  }, [auth, authError, dispatch]);
+  // useEffect(() => {
+  //   if (authError) {
+  //     console.log('오류 발생');
+  //     console.log(authError);
+  //     return;
+  //   }
+  //   if (auth) {
+  //     console.log('로그인 성공');
+  //     dispatch(check());
+  //   }
+  // }, [auth, authError, dispatch]);
 
-  useEffect(() => {
-    if (userState) {
-      navigate('/');
-      try {
-        localStorage.setItem('userState', JSON.stringify(userState));
-      } catch (e) {
-        console.log('localStorage is not working');
-      }
-    }
-  }, [userState, navigate]);
+  // useEffect(() => {
+  //   if (userState) {
+  //     navigate('/');
+  //     try {
+  //       localStorage.setItem('userState', JSON.stringify(userState));
+  //     } catch (e) {
+  //       console.log('localStorage is not working');
+  //     }
+  //   }
+  // }, [userState, navigate]);
 
   return (
     <AuthForm
